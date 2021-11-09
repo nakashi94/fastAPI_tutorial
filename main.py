@@ -1,3 +1,4 @@
+from typing import Optional
 from fastapi import FastAPI
 import uvicorn
 
@@ -23,8 +24,9 @@ async def country(country_name: str = "japan", country_num: int = 1):  # async�
 """
 
 
-@app.get("/countries/{country_name}")  # パスパラメータとクエリパラメータ
-async def country(country_name: str = "japan", city_name: str = "tokyo"):  # asyncは非同期処理を実行するために必要
+@app.get("/countries/")  # パスパラメータとクエリパラメータ
+# asyncは非同期処理
+async def country(country_name: Optional[str] = None, city_name: Optional[str] = None):
     return {
         "country_name": country_name,
         "city_name": city_name
