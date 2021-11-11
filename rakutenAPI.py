@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # os.environを用いて環境変数を表示させます
-# print(os.environ['APP_ID'])
+print(os.environ['APP_ID'])
 
 URL = 'https://app.rakuten.co.jp/services/api/Travel/KeywordHotelSearch/20170426'
 APP_ID = os.environ['APP_ID']
