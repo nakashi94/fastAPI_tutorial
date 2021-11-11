@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 # .envファイルの内容を読み込みます
-load_dotenv()
+load_dotenv("../.env")
 
 # os.environを用いて環境変数を表示させます
 print(os.environ['APP_ID'])
